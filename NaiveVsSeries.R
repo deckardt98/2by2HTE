@@ -2,6 +2,7 @@
 f <- function(icc,m){
   return((icc*(m-1)+1))
 }
+
 #function approximating p0 to p3
 approxp <- function(m, rho00, rho0, sigma0, b4, piz){
   #Input
@@ -169,6 +170,7 @@ approxp_na <- function(m, rho00, rho0, sigma0, b4, piz){
   return(app)
   
 }
+
 #function calculating lambda11 lambda12 lambda22 via naive approach
 callamb_na <- function(m, rho00, rho0, sigma0, b4, piz){
   #Input
@@ -351,32 +353,4 @@ nc_na_whole <- function(type, delta, m, rho00, rho0, sigma0, b4){
   return(result)
 }
 
-z1 <- read.csv("z-test for CEX.csv")
-nc_naive <- nc_na_whole(1,delta1,m,rho00,rho0,1,b4)
-z1 <- cbind(z1,nc_naive)
-z1 <- z1[,-c(1)]
-write.csv(z1,"/Users/deckard/Desktop/Fan Li Project/Project 2/z-test for CEX updated.csv")
 
-z2 <- read.csv("z-test for CEZ.csv")
-nc_naive <- nc_na_whole(2,delta2,m,rho00,rho0,1,b4)
-z2 <- cbind(z2,nc_naive)
-z2 <- z2[,-c(1)]
-write.csv(z2,"/Users/deckard/Desktop/Fan Li Project/Project 2/z-test for CEZ updated.csv")
-
-z3 <- read.csv("z-test for MEX.csv")
-nc_naive <- nc_na_whole(3,delta3,m,rho00,rho0,1,b4)
-z3 <- cbind(z3,nc_naive)
-z3 <- z3[,-c(1)]
-write.csv(z3,"/Users/deckard/Desktop/Fan Li Project/Project 2/z-test for MEX updated.csv")
-
-z4 <- read.csv("z-test for MEZ.csv")
-nc_naive <- nc_na_whole(4,delta4,m,rho00,rho0,1,b4)
-z4 <- cbind(z4,nc_naive)
-z4 <- z4[,-c(1)]
-write.csv(z4,"/Users/deckard/Desktop/Fan Li Project/Project 2/z-test for MEZ updated.csv")
-
-z5 <- read.csv("z-test for IE.csv")
-nc_naive <- nc_na_whole(5,delta5,m,rho00,rho0,1,b4)
-z5 <- cbind(z5,nc_naive)
-z5 <- z5[,-c(1)]
-write.csv(z5,"/Users/deckard/Desktop/Fan Li Project/Project 2/z-test for IE updated.csv")
