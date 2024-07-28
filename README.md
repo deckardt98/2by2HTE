@@ -1,2 +1,3 @@
 # Description
-## This file contains codes that can be used to calculate sample size (the number of clusters) for the paper entitled ``Addressing cluster-level treatment effect heterogeneity in sample size determination for hierarchical 2 × 2 factorial designs''.
+## This file contains the code for calculating the sample size (number of clusters) for the paper titled “Addressing Cluster-Level Treatment Effect Heterogeneity in Sample Size Determination for Hierarchical 2 × 2 Factorial Designs.”
+## The SSCode.R file provides two approaches: one approximated by series expansions and the other using naive approximations.
